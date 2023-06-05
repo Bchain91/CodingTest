@@ -4,10 +4,17 @@
 
 int solution(int i, int j, int k) {
     int answer = 0;
-    int cnt = 0;
-    char* str[7];    
+    int size, l;
+    char buf[100000];
+    char cK = k+48;
     for(i; i <= j; i++)
-        sprintf(str[cnt++],"%d", i);
-    //printf("%s ", str[0]);
+    {
+        size = sprintf(buf, "%d", i);
+        for(l = 0; l<size; l++)
+        {
+            if(buf[l] == cK)
+                answer++;
+        }            
+    }
     return answer;
 }
