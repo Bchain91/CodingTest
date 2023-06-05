@@ -6,17 +6,13 @@
 int solution(const char* my_string) {
     int size = strlen(my_string);
     int answer = 0;
-    int i, temp;
-    int flag = 1;
-    
+    int i;
+    int flag;
+
     for(i=0; i<size; i++){        
-        temp = atoi(my_string+i);        
-        if(flag){
-            answer += temp;
-            flag = 0;
+        if(my_string[i] < 65){
+            
         }
-        if(temp == 0)
-            flag = 1;     
     }
     return answer;
 }
